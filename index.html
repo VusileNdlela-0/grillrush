@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GrillRush</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: black;
+  position: sticky;
+  top: 0;
+}
+
+nav h1 {
+  color: #ffb300;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffb300;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url('https://images.unsplash.com/photo-1550547660-d9450f859349') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3em;
+}
+
+.hero button {
+  padding: 15px 25px;
+  background: #ffb300;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* SECTIONS */
+section {
+  padding: 50px;
+}
+
+/* MENU */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.menu-item {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  padding: 20px;
+  text-align: center;
+}
+
+/* BUTTON */
+.btn {
+  background: #ffb300;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <h1>🔥 GrillRush</h1>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  
+  </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+  <div>
+    <h2>Fast. Fresh. Flame-Grilled.</h2>
+    <p>Bold flavours. Zero compromise.</p>
+    <button onclick="scrollToMenu()">View Menu</button>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About GrillRush</h2>
+  <p>
+    GrillRush is a modern fast-food concept focused on bold flavours, quick service,
+    and premium ingredients. We bring you flame-grilled burgers, crispy chicken,
+    and loaded sides made fresh daily.
+  </p>
+
+  <h3>📍 Location</h3>
+  <p>123 Flame Street, George, Western Cape</p>
+
+  <h3>🕒 Hours</h3>
+  <p>Mon - Sun: 10:00 AM – 10:00 PM</p>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <h2>🍔 Our Menu</h2>
+
+  <h3>Signature Burgers</h3>
+  <div class="menu-grid">
+    <div class="menu-item">Classic Smash – R65</div>
+    <div class="menu-item">Double Cheese Stack – R85</div>
+    <div class="menu-item">Crispy Chicken Deluxe – R70</div>
+    <div class="menu-item">Spicy Heat Burger – R75</div>
+  </div>
+
+  <h3>Chicken & Wraps</h3>
+  <div class="menu-grid">
+    <div class="menu-item">Chicken Tenders – R60</div>
+    <div class="menu-item">Grilled Chicken Wrap – R65</div>
+    <div class="menu-item">Spicy Buffalo Wrap – R70</div>
+    <div class="menu-item">Chicken Nuggets – R50</div>
+  </div>
+
+  <h3>Sides</h3>
+  <div class="menu-grid">
+    <div class="menu-item">Fries – R30</div>
+    <div class="menu-item">Loaded Fries – R55</div>
+    <div class="menu-item">Onion Rings – R40</div>
+    <div class="menu-item">Cheesy Fries – R45</div>
+  </div>
+
+  <h3>Drinks</h3>
+  <div class="menu-grid">
+    <div class="menu-item">Soft Drinks – R25</div>
+    <div class="menu-item">Milkshakes – R40</div>
+    <div class="menu-item">Iced Coffee – R45</div>
+  </div>
+
+  <h3>Combo Meals</h3>
+  <div class="menu-grid">
+    <div class="menu-item">Smash Combo – R95</div>
+    <div class="menu-item">Chicken Combo – R100</div>
+    <div class="menu-item">Double Stack Combo – R120</div>
+  </div>
+
+  <!-- 🔥 VISUAL MENU IMAGE -->
+  <div style="text-align:center; margin-top:40px;">
+    <h3 style="margin-bottom:20px;">📋 Full Visual Menu</h3>
+
+    <img src="menu.png" alt="GrillRush Menu"
+         style="width:100%; max-width:900px; border-radius:15px;
+         box-shadow:0 20px 50px rgba(0,0,0,0.8);
+         transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.02)'"
+         onmouseout="this.style.transform='scale(1)'">
+  </div>
+
+  <!-- 📄 PDF BUTTONS -->
+  <div style="text-align:center; margin-top:30px;">
+    <a href="menu.pdf" target="_blank">
+      <button class="btn">👁 View Full Menu (PDF)</button>
+    </a>
+
+    <a href="menu.pdf" download>
+      <button class="btn">⬇ Download Menu</button>
+    </a>
+  </div>
+
+</section>
+<!-- SERVICES -->
+<section>
+  <h2>🚀 Our Services</h2>
+  <ul>
+    <li>✔ Fast Takeaway</li>
+    <li>✔ Online Orders (Coming Soon)</li>
+    <li>✔ Delivery Service (Coming Soon)</li>
+    <li>✔ Catering for Events</li>
+  </ul>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>📞 Contact Us</h2>
+  <p>Phone: 27786828265</p>
+  <p>Email: info@grillrush.co.za</p>
+  <button class="btn">Order Now</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 GrillRush. All rights reserved.</p>
+</footer>
+
+<script>
+function scrollToMenu() {
+  document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+}
+</script>
+
+</body>
+<script>
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/27786828265" target="_blank" 
+   style="position:fixed; bottom:20px; right:20px;
+   background:#25D366; color:white; font-size:20px;
+   padding:15px 18px; border-radius:50%;
+   text-decoration:none; box-shadow:0 5px 15px rgba(0,0,0,0.4);">
+   💬
+</a>
+</html>
