@@ -111,13 +111,13 @@ footer {
 <!-- NAVBAR -->
 <nav>
   <h1>🔥 GrillRush</h1>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  
-  </ul>
+ <ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#menu">Menu</a></li>
+  <li><a href="#about">About</a></li>
+  <li><a href="#catering">Catering</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
 <!-- HOME -->
@@ -127,22 +127,6 @@ footer {
     <p>Bold flavours. Zero compromise.</p>
     <button onclick="scrollToMenu()">View Menu</button>
   </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <h2>About GrillRush</h2>
-  <p>
-    GrillRush is a modern fast-food concept focused on bold flavours, quick service,
-    and premium ingredients. We bring you flame-grilled burgers, crispy chicken,
-    and loaded sides made fresh daily.
-  </p>
-
-  <h3>📍 Location</h3>
-  <p>123 Flame Street, George, Western Cape</p>
-
-  <h3>🕒 Hours</h3>
-  <p>Mon - Sun: 10:00 AM – 10:00 PM</p>
 </section>
 
 <!-- MENU -->
@@ -211,6 +195,22 @@ footer {
   </div>
 
 </section>
+
+  <!-- ABOUT -->
+<section id="about">
+  <h2>About GrillRush</h2>
+  <p>
+    GrillRush is a modern fast-food concept focused on bold flavours, quick service,
+    and premium ingredients. We bring you flame-grilled burgers, crispy chicken,
+    and loaded sides made fresh daily.
+  </p>
+
+  <h3>📍 Location</h3>
+  <p>123 Flame Street, George, Western Cape</p>
+
+  <h3>🕒 Hours</h3>
+  <p>Mon - Sun: 10:00 AM – 10:00 PM</p>
+</section>
 <!-- SERVICES -->
 <section>
   <h2>🚀 Our Services</h2>
@@ -239,7 +239,276 @@ function scrollToMenu() {
   document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
 }
 </script>
+<!-- MODERN DROPDOWN CATERING SECTION -->
+<section id="catering" style="background:#161616; border-radius:20px; margin:50px; overflow:hidden;">
 
+  <div style="text-align:center; padding:30px 20px;">
+    
+    <h2 style="
+      font-size:2.7em;
+      color:#ffb300;
+      margin-bottom:10px;
+    ">
+      🎉 GrillRush Catering & Events
+    </h2>
+
+    <p style="
+      max-width:750px;
+      margin:auto;
+      color:#ccc;
+      line-height:1.8;
+      font-size:1.05em;
+    ">
+      Bringing bold flavours and premium fast-food experiences to birthdays,
+      corporate events, private parties, and celebrations across George.
+    </p>
+
+  </div>
+
+  <div style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    padding:40px;
+    align-items:center;
+  ">
+
+    <!-- LEFT SIDE -->
+    <div style="position:relative;">
+
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+           alt="GrillRush Catering"
+           style="
+             width:100%;
+             height:100%;
+             object-fit:cover;
+             border-radius:20px;
+             box-shadow:0 15px 40px rgba(0,0,0,0.6);
+           ">
+
+      <!-- OVERLAY -->
+      <div style="
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        border-radius:20px;
+        background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-end;
+        padding:30px;
+        box-sizing:border-box;
+      ">
+
+        <h2 style="
+          color:#ffb300;
+          font-size:2em;
+          margin-bottom:15px;
+        ">
+          GrillRush Catering
+        </h2>
+
+        <p style="
+          color:white;
+          line-height:1.8;
+          font-size:1em;
+        ">
+          🍔 Gourmet Burgers<br>
+          🍟 Loaded Fries<br>
+          🌯 Chicken Wraps<br>
+          🥤 Drinks & Milkshakes<br>
+          🎉 Birthday & Corporate Catering
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div>
+
+      <!-- DROPDOWN BUTTON -->
+      <button onclick="toggleCateringForm()" class="btn"
+        style="
+          width:100%;
+          padding:18px;
+          font-size:1.1em;
+          border-radius:12px;
+          font-weight:bold;
+          margin-bottom:20px;
+        ">
+        🎉 Request Catering
+      </button>
+
+      <!-- DROPDOWN FORM -->
+      <div id="cateringForm"
+        style="
+          display:none;
+          background:#1f1f1f;
+          padding:35px;
+          border-radius:20px;
+          box-shadow:0 10px 30px rgba(0,0,0,0.5);
+          animation:fadeIn 0.4s ease;
+        ">
+
+        <h3 style="
+          margin-bottom:25px;
+          color:#ffb300;
+          font-size:1.7em;
+        ">
+          Catering Enquiry
+        </h3>
+
+        <input type="text" id="name"
+          placeholder="Your Name"
+          style="
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:10px;
+            background:#2b2b2b;
+            color:white;
+          ">
+
+        <input type="tel" id="phone"
+          placeholder="Phone Number"
+          style="
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:10px;
+            background:#2b2b2b;
+            color:white;
+          ">
+
+        <input type="date" id="date"
+          style="
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:10px;
+            background:#2b2b2b;
+            color:white;
+          ">
+
+        <input type="number" id="guests"
+          placeholder="Number of Guests"
+          style="
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:10px;
+            background:#2b2b2b;
+            color:white;
+          ">
+
+        <select id="event"
+          style="
+            width:100%;
+            padding:15px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:10px;
+            background:#2b2b2b;
+            color:white;
+          ">
+
+          <option value="">Select Event Type</option>
+          <option>Birthday</option>
+          <option>Corporate Event</option>
+          <option>Wedding</option>
+          <option>Private Party</option>
+
+        </select>
+
+        <textarea id="message"
+          placeholder="Tell us more about your event..."
+          style="
+            width:100%;
+            padding:15px;
+            height:120px;
+            margin-bottom:20px;
+            border:none;
+            border-radius:10px;
+            background:#2b2b2b;
+            color:white;
+          "></textarea>
+
+        <button class="btn"
+          onclick="sendCatering()"
+          style="
+            width:100%;
+            padding:16px;
+            font-size:1em;
+            border-radius:10px;
+            font-weight:bold;
+          ">
+          🚀 Submit Catering Request
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+<script>
+function toggleCateringForm() {
+
+  let form = document.getElementById("cateringForm");
+
+  if (form.style.display === "none") {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+
+}
+
+function sendCatering() {
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let date = document.getElementById("date").value;
+  let guests = document.getElementById("guests").value;
+  let event = document.getElementById("event").value;
+  let message = document.getElementById("message").value;
+
+  let text = `Catering Request:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Date: ${date}%0A
+Guests: ${guests}%0A
+Event: ${event}%0A
+Details: ${message}`;
+
+  window.open(`https://wa.me/27786828265?text=${text}`, "_blank");
+
+}
+</script>
+  </script>
 </body>
 <!-- WHATSAPP BUTTON -->
 <a href="https://wa.me/27786828265" target="_blank" 
