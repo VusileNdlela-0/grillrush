@@ -102,12 +102,61 @@ footer {
   border: none;
   cursor: pointer;
 }
-/* MOBILE RESPONSIVE CATERING */
+/* =========================
+   DESKTOP CATERING STYLING
+========================= */
+
+#catering {
+  background: #161616;
+  border-radius: 20px;
+  margin: 50px;
+  overflow: hidden;
+}
+
+#catering h2 {
+  font-size: 2.7em;
+}
+
+#catering p {
+  font-size: 1.05em;
+  line-height: 1.8;
+}
+
+#catering img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#catering button {
+  padding: 18px;
+  font-size: 1.1em;
+  border-radius: 12px;
+}
+
+#catering input,
+#catering textarea,
+#catering select {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2b2b2b;
+  color: white;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
 
 @media (max-width: 768px) {
 
   #catering {
-    margin: 20px !important;
+    margin: 20px;
     border-radius: 15px;
   }
 
@@ -135,10 +184,38 @@ footer {
   #catering input,
   #catering textarea,
   #catering select {
-    width: 100%;
     font-size: 0.95em;
     padding: 14px;
-    box-sizing: border-box;
+  }
+
+}
+
+
+/* =========================
+   SMALL PHONE OPTIMIZATION
+========================= */
+
+@media (max-width: 480px) {
+
+  #catering {
+    margin: 15px;
+  }
+
+  #catering h2 {
+    font-size: 1.7em !important;
+  }
+
+  #catering p {
+    font-size: 0.9em !important;
+  }
+
+  #catering img {
+    height: 240px !important;
+  }
+
+  #catering button {
+    padding: 12px !important;
+    font-size: 0.95em !important;
   }
 
 }
