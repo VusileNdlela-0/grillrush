@@ -323,7 +323,6 @@ footer{
   <div>
     <h2>Fast. Fresh. Flame-Grilled.</h2>
     <p>Bold flavours. Zero compromise.</p>
-    <button onclick="scrollToMenu()">View Menu</button>
   </div>
 </section>
 
@@ -698,8 +697,161 @@ Details: ${message}`;
 
 }
 </script>
+function toggleReviewForm() {
 
+  let form = document.getElementById("reviewForm");
+
+  if(form.style.display === "none") {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+
+}
+
+function sendReview() {
+
+  let name = document.getElementById("reviewName").value;
+  let rating = document.getElementById("reviewRating").value;
+  let review = document.getElementById("reviewMessage").value;
+
+  let text = `New GrillRush Review:%0A
+Name: ${name}%0A
+Rating: ${rating}%0A
+Review: ${review}`;
+
+  window.open(`https://wa.me/27786828265?text=${text}`, "_blank");
+
+}
   </script>
+ <!-- DROPDOWN REVIEWS SECTION -->
+<section id="reviews" style="
+  background:#161616;
+  margin:20px;
+  border-radius:20px;
+  padding:40px 25px;
+">
+
+  <!-- HEADING -->
+  <div style="
+    text-align:center;
+    margin-bottom:30px;
+  ">
+
+    <h2 style="
+      color:#ffb300;
+      font-size:2.2em;
+      margin-bottom:10px;
+    ">
+      ⭐ Customer Reviews
+    </h2>
+
+    <p style="
+      color:#ccc;
+      max-width:700px;
+      margin:auto;
+      line-height:1.7;
+    ">
+      Share your GrillRush experience with us.
+    </p>
+
+  </div>
+
+  <!-- DROPDOWN BUTTON -->
+  <div style="max-width:700px; margin:auto;">
+
+    <button onclick="toggleReviewForm()" class="btn"
+      style="
+        width:100%;
+        padding:15px;
+        font-size:1em;
+        border-radius:12px;
+        font-weight:bold;
+        margin-bottom:15px;
+      ">
+      ⭐ Leave a Review
+    </button>
+
+    <!-- REVIEW FORM -->
+    <div id="reviewForm"
+      style="
+        display:none;
+        background:#1f1f1f;
+        padding:25px;
+        border-radius:18px;
+        animation:fadeIn 0.4s ease;
+      ">
+
+      <!-- NAME -->
+      <input type="text"
+        id="reviewName"
+        placeholder="Your Name"
+        style="
+          width:100%;
+          padding:14px;
+          margin-bottom:15px;
+          border:none;
+          border-radius:10px;
+          background:#2b2b2b;
+          color:white;
+          box-sizing:border-box;
+        ">
+
+      <!-- RATING -->
+      <select id="reviewRating"
+        style="
+          width:100%;
+          padding:14px;
+          margin-bottom:15px;
+          border:none;
+          border-radius:10px;
+          background:#2b2b2b;
+          color:white;
+          box-sizing:border-box;
+        ">
+
+        <option value="">Rate GrillRush</option>
+        <option>⭐ 1 Star</option>
+        <option>⭐ 2 Stars</option>
+        <option>⭐ 3 Stars</option>
+        <option>⭐ 4 Stars</option>
+        <option>⭐ 5 Stars</option>
+
+      </select>
+
+      <!-- REVIEW -->
+      <textarea id="reviewMessage"
+        placeholder="Write your review..."
+        style="
+          width:100%;
+          height:120px;
+          padding:14px;
+          margin-bottom:20px;
+          border:none;
+          border-radius:10px;
+          background:#2b2b2b;
+          color:white;
+          box-sizing:border-box;
+        "></textarea>
+
+      <!-- BUTTON -->
+      <button class="btn"
+        onclick="sendReview()"
+        style="
+          width:100%;
+          padding:15px;
+          font-size:1em;
+          border-radius:10px;
+          font-weight:bold;
+        ">
+        🚀 Submit Review
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
 <!-- CONTACT SECTION -->
 <section id="contact" style="
   background:#161616;
@@ -890,6 +1042,37 @@ Details: ${message}`;
   </div>
 
 </section>
+<!-- FOOTER -->
+<footer style="
+  background:black;
+  padding:25px 20px;
+  text-align:center;
+  border-top:1px solid #222;
+">
+
+  <h3 style="
+    color:#ffb300;
+    margin-bottom:10px;
+  ">
+    🔥 GrillRush
+  </h3>
+
+  <p style="
+    color:#999;
+    margin-bottom:15px;
+    line-height:1.6;
+  ">
+    Fast. Fresh. Flame-Grilled.
+  </p>
+
+  <p style="
+    color:#666;
+    font-size:0.9em;
+  ">
+    © 2026 GrillRush. All Rights Reserved.
+  </p>
+
+</footer>
 </body>
 <!-- WHATSAPP BUTTON -->
 <a href="https://wa.me/27786828265" target="_blank" class="whatsapp-btn">
