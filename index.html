@@ -102,123 +102,7 @@ footer {
   border: none;
   cursor: pointer;
 }
-/* =========================
-   DESKTOP CATERING STYLING
-========================= */
 
-#catering {
-  background: #161616;
-  border-radius: 20px;
-  margin: 50px;
-  overflow: hidden;
-}
-
-#catering h2 {
-  font-size: 2.7em;
-}
-
-#catering p {
-  font-size: 1.05em;
-  line-height: 1.8;
-}
-
-#catering img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-#catering button {
-  padding: 18px;
-  font-size: 1.1em;
-  border-radius: 12px;
-}
-
-#catering input,
-#catering textarea,
-#catering select {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-  background: #2b2b2b;
-  color: white;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
-
-
-/* =========================
-   MOBILE RESPONSIVE DESIGN
-========================= */
-
-@media (max-width: 768px) {
-
-  #catering {
-    margin: 20px;
-    border-radius: 15px;
-  }
-
-  #catering h2 {
-    font-size: 2em !important;
-    line-height: 1.3;
-  }
-
-  #catering p {
-    font-size: 0.95em !important;
-    line-height: 1.6;
-  }
-
-  #catering img {
-    height: 300px !important;
-    border-radius: 15px;
-  }
-
-  #catering button {
-    width: 100%;
-    font-size: 1em !important;
-    padding: 14px !important;
-  }
-
-  #catering input,
-  #catering textarea,
-  #catering select {
-    font-size: 0.95em;
-    padding: 14px;
-  }
-
-}
-
-
-/* =========================
-   SMALL PHONE OPTIMIZATION
-========================= */
-
-@media (max-width: 480px) {
-
-  #catering {
-    margin: 15px;
-  }
-
-  #catering h2 {
-    font-size: 1.7em !important;
-  }
-
-  #catering p {
-    font-size: 0.9em !important;
-  }
-
-  #catering img {
-    height: 240px !important;
-  }
-
-  #catering button {
-    padding: 12px !important;
-    font-size: 0.95em !important;
-  }
-
-}
 </style>
 
 </head>
@@ -340,26 +224,35 @@ footer {
     <li>✔ Catering for Events</li>
   </ul>
 </section>
-  
-  <!-- MODERN DROPDOWN CATERING SECTION -->
-<section id="catering" style="background:#161616; border-radius:20px; margin:50px; overflow:hidden;">
+<!-- RESPONSIVE MODERN CATERING SECTION -->
+<section id="catering" style="
+  background:#161616;
+  border-radius:20px;
+  margin:20px;
+  overflow:hidden;
+">
 
-  <div style="text-align:center; padding:30px 20px;">
-    
+  <!-- TOP TEXT -->
+  <div style="
+    text-align:center;
+    padding:25px 15px;
+  ">
+
     <h2 style="
-      font-size:2.7em;
+      font-size:2em;
       color:#ffb300;
       margin-bottom:10px;
+      line-height:1.3;
     ">
       🎉 GrillRush Catering & Events
     </h2>
 
     <p style="
-      max-width:750px;
+      max-width:700px;
       margin:auto;
       color:#ccc;
-      line-height:1.8;
-      font-size:1.05em;
+      line-height:1.7;
+      font-size:0.95em;
     ">
       Bringing bold flavours and premium fast-food experiences to birthdays,
       corporate events, private parties, and celebrations across George.
@@ -367,25 +260,29 @@ footer {
 
   </div>
 
+  <!-- GRID -->
   <div style="
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
-    padding:40px;
-    align-items:center;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+    padding:20px;
+    align-items:start;
   ">
 
-    <!-- LEFT SIDE -->
-    <div style="position:relative;">
+    <!-- LEFT IMAGE -->
+    <div style="
+      position:relative;
+      width:100%;
+    ">
 
       <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
            alt="GrillRush Catering"
            style="
              width:100%;
-             height:100%;
+             height:320px;
              object-fit:cover;
-             border-radius:20px;
-             box-shadow:0 15px 40px rgba(0,0,0,0.6);
+             border-radius:18px;
+             box-shadow:0 10px 25px rgba(0,0,0,0.5);
            ">
 
       <!-- OVERLAY -->
@@ -395,27 +292,27 @@ footer {
         left:0;
         width:100%;
         height:100%;
-        border-radius:20px;
+        border-radius:18px;
         background:linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
         display:flex;
         flex-direction:column;
         justify-content:flex-end;
-        padding:30px;
+        padding:20px;
         box-sizing:border-box;
       ">
 
         <h2 style="
           color:#ffb300;
-          font-size:2em;
-          margin-bottom:15px;
+          font-size:1.6em;
+          margin-bottom:10px;
         ">
           GrillRush Catering
         </h2>
 
         <p style="
           color:white;
-          line-height:1.8;
-          font-size:1em;
+          line-height:1.7;
+          font-size:0.95em;
         ">
           🍔 Gourmet Burgers<br>
           🍟 Loaded Fries<br>
@@ -435,11 +332,11 @@ footer {
       <button onclick="toggleCateringForm()" class="btn"
         style="
           width:100%;
-          padding:18px;
-          font-size:1.1em;
+          padding:15px;
+          font-size:1em;
           border-radius:12px;
           font-weight:bold;
-          margin-bottom:20px;
+          margin-bottom:15px;
         ">
         🎉 Request Catering
       </button>
@@ -449,16 +346,16 @@ footer {
         style="
           display:none;
           background:#1f1f1f;
-          padding:35px;
-          border-radius:20px;
-          box-shadow:0 10px 30px rgba(0,0,0,0.5);
+          padding:20px;
+          border-radius:18px;
+          box-shadow:0 10px 25px rgba(0,0,0,0.4);
           animation:fadeIn 0.4s ease;
         ">
 
         <h3 style="
-          margin-bottom:25px;
+          margin-bottom:20px;
           color:#ffb300;
-          font-size:1.7em;
+          font-size:1.4em;
         ">
           Catering Enquiry
         </h3>
@@ -467,58 +364,63 @@ footer {
           placeholder="Your Name"
           style="
             width:100%;
-            padding:15px;
-            margin-bottom:15px;
+            padding:14px;
+            margin-bottom:14px;
             border:none;
             border-radius:10px;
             background:#2b2b2b;
             color:white;
+            box-sizing:border-box;
           ">
 
         <input type="tel" id="phone"
           placeholder="Phone Number"
           style="
             width:100%;
-            padding:15px;
-            margin-bottom:15px;
+            padding:14px;
+            margin-bottom:14px;
             border:none;
             border-radius:10px;
             background:#2b2b2b;
             color:white;
+            box-sizing:border-box;
           ">
 
         <input type="date" id="date"
           style="
             width:100%;
-            padding:15px;
-            margin-bottom:15px;
+            padding:14px;
+            margin-bottom:14px;
             border:none;
             border-radius:10px;
             background:#2b2b2b;
             color:white;
+            box-sizing:border-box;
           ">
 
         <input type="number" id="guests"
           placeholder="Number of Guests"
           style="
             width:100%;
-            padding:15px;
-            margin-bottom:15px;
+            padding:14px;
+            margin-bottom:14px;
             border:none;
             border-radius:10px;
             background:#2b2b2b;
             color:white;
+            box-sizing:border-box;
           ">
 
         <select id="event"
           style="
             width:100%;
-            padding:15px;
-            margin-bottom:15px;
+            padding:14px;
+            margin-bottom:14px;
             border:none;
             border-radius:10px;
             background:#2b2b2b;
             color:white;
+            box-sizing:border-box;
           ">
 
           <option value="">Select Event Type</option>
@@ -533,20 +435,21 @@ footer {
           placeholder="Tell us more about your event..."
           style="
             width:100%;
-            padding:15px;
-            height:120px;
-            margin-bottom:20px;
+            height:110px;
+            padding:14px;
+            margin-bottom:18px;
             border:none;
             border-radius:10px;
             background:#2b2b2b;
             color:white;
+            box-sizing:border-box;
           "></textarea>
 
         <button class="btn"
           onclick="sendCatering()"
           style="
             width:100%;
-            padding:16px;
+            padding:15px;
             font-size:1em;
             border-radius:10px;
             font-weight:bold;
@@ -564,19 +467,22 @@ footer {
 
 <style>
 @keyframes fadeIn {
+
   from {
-    opacity: 0;
-    transform: translateY(-10px);
+    opacity:0;
+    transform:translateY(-10px);
   }
 
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity:1;
+    transform:translateY(0);
   }
+
 }
 </style>
 
 <script>
+
 function toggleCateringForm() {
 
   let form = document.getElementById("cateringForm");
@@ -609,26 +515,9 @@ Details: ${message}`;
   window.open(`https://wa.me/27786828265?text=${text}`, "_blank");
 
 }
-</script>
-  
-<!-- CONTACT -->
-<section id="contact">
-  <h2>📞 Contact Us</h2>
-  <p>Phone: 27786828265</p>
-  <p>Email: info@grillrush.co.za</p>
-  <button class="btn">Order Now</button>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <p>© 2026 GrillRush. All rights reserved.</p>
-</footer>
-
-<script>
-function scrollToMenu() {
-  document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
-}
-</script>
+</script>  
+ 
 
   </script>
 </body>
