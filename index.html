@@ -696,12 +696,50 @@ Details: ${message}`;
   window.open(`https://wa.me/27786828265?text=${text}`, "_blank");
 
 }
-</script>
+<script>
+
+function toggleCateringForm() {
+
+  let form = document.getElementById("cateringForm");
+
+  if (form.style.display === "none") {
+    form.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+
+}
+
+function sendCatering() {
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let date = document.getElementById("date").value;
+  let guests = document.getElementById("guests").value;
+  let event = document.getElementById("event").value;
+  let message = document.getElementById("message").value;
+
+  let text = `Catering Request:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Date: ${date}%0A
+Guests: ${guests}%0A
+Event: ${event}%0A
+Details: ${message}`;
+
+  window.open(`https://wa.me/27786828265?text=${text}`, "_blank");
+
+}
+
+/* =========================
+   REVIEW DROPDOWN
+========================= */
+
 function toggleReviewForm() {
 
   let form = document.getElementById("reviewForm");
 
-  if(form.style.display === "none") {
+  if (form.style.display === "none") {
     form.style.display = "block";
   } else {
     form.style.display = "none";
@@ -723,7 +761,9 @@ Review: ${review}`;
   window.open(`https://wa.me/27786828265?text=${text}`, "_blank");
 
 }
-  </script>
+
+</script>
+
  <!-- DROPDOWN REVIEWS SECTION -->
 <section id="reviews" style="
   background:#161616;
